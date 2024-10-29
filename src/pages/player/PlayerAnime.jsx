@@ -29,7 +29,8 @@ const PlayerAnime = () => {
       let config = {
         method: "get",
         maxBodyLength: Infinity,
-        url: `https://proxymaster-1-q6640207.deta.app/fetch/https://api.anix.my/movies/detail/${id}`,
+        url: `https://thingproxy.freeboard.io/fetch/fetch/https://api.anix.my/movies/detail/${id}`,
+        // url: `https://proxymaster-1-q6640207.deta.app/fetch/https://api.anix.my/movies/detail/${id}`,
         headers: {
           authority: "api.anix.my",
           accept: "application/json",
@@ -70,7 +71,8 @@ const PlayerAnime = () => {
         let config = {
           method: "get",
           maxBodyLength: Infinity,
-          url: `https://proxymaster-1-q6640207.deta.app/fetch/https://api.anix.my/episodes/detail/${slug}`,
+          url: `https://thingproxy.freeboard.io/fetch/https://api.anix.my/episodes/detail/${slug}`,
+          // url: `https://proxymaster-1-q6640207.deta.app/fetch/https://api.anix.my/episodes/detail/${slug}`,
           headers: {
             authority: "api.anix.my",
             accept: "application/json",

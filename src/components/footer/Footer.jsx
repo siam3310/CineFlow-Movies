@@ -35,18 +35,18 @@ const Footer = () => {
           just index those links which are already available in internet
         </div>
         <div className="socialIcons">
-          <span className="icon">
+          {/* <span className="icon">
             <FaFacebookF />
-          </span>
-          <span className="icon">
+          </span> */}
+          <a href="https://www.instagram.com/cineflow_movies_official/" target="__blank"><span  className="icon">
             <FaInstagram />
-          </span>
-          <span className="icon">
+          </span></a>
+          {/* <span className="icon">
             <FaTwitter />
           </span>
           <span className="icon">
             <FaLinkedin />
-          </span>
+          </span> */}
         </div>
       </ContentWrapper>
     </footer>

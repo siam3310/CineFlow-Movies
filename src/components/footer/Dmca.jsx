@@ -7,7 +7,7 @@ const dmca = () => {
       <div className='dmca-head'>
              {/* disclaimer */}
           <h2 className='dmca-heading'>Disclaimer</h2>
-          <p className='dmca-p'>cineflow.vercel.app is a movie search engine using open source APIs and does not upload or host any files on it's server. If you are a valid owner of any content listed here & want to remove it then please send us an DMCA formatted takedown notice at <a href='mailto:deepakpuri9190@gmail.com' className=' text-pink-400'>email</a>. We will remove your content as soon as possible.</p>
+          <p className='dmca-p'>cineflow.netlify.app is a movie search engine using open source APIs and does not upload or host any files on it's server. If you are a valid owner of any content listed here & want to remove it then please send us an DMCA formatted takedown notice at <a href='mailto:deepakpuri9190@gmail.com' className=' text-pink-400'>email</a>. We will remove your content as soon as possible.</p>
   
           <h1 className='dmca-heading'>DMCA takedown request requirements</h1>
           <p className='dmca-p'>We take the intellectual property rights of others seriously and require that our Users do the same. The Digital Millennium Copyright Act (DMCA) established a process for addressing claims of copyright infringement. If you own a copyright or have authority to act on behalf of a copyright owner and want to report a claim that a third party is infringing that material on or through GitLab's services, please submit a DMCA report on our Github repository or email , and we will take appropriate action.</p>
@@ -20,7 +20,7 @@ const dmca = () => {
               <li>A statement that the information in the notification is accurate, and under penalty of perjury, that the complaining party is authorized to act on behalf of the owner of an exclusive right that is allegedly infringed (Note that under Section 512(f) any person who knowingly and materially misrepresents that material or activity is infringing may be subject to liability for damages. In other words, DON'T MAKE FALSE CLAIMS!)</li>
               <li>A physical or electronic signature of a person authorized to act on behalf of the owner of an exclusive right that is allegedly infringed.</li>
           </ul>
-          <h2 className='dmca-heading'>cineflow.vercel.app does not store any files on our server, we only linked to the media which is hosted on 3rd party services.</h2>
+          <h2 className='dmca-heading'>cineflow.netlify.app does not store any files on our server, we only linked to the media which is hosted on 3rd party services.</h2>
       </div>
     )
   }
