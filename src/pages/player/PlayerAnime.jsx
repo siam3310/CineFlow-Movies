@@ -47,6 +47,8 @@ const PlayerAnime = () => {
           "sec-fetch-dest": "empty",
           "sec-fetch-mode": "cors",
           "sec-fetch-site": "same-site",
+          'X-Requested-With': 'XMLHttpRequest',
+      'Origin': 'https://cineflow.netlify.app',
           "sec-gpc": "1",
           "user-agent":
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
@@ -90,6 +92,8 @@ const PlayerAnime = () => {
             "sec-fetch-mode": "cors",
             "sec-fetch-site": "same-site",
             "sec-gpc": "1",
+            'X-Requested-With': 'XMLHttpRequest',
+      'Origin': 'https://cineflow.netlify.app',
             "user-agent":
               "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
           },
