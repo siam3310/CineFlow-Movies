@@ -37,9 +37,9 @@ const PlayerAnime = () => {
           "accept-language": "en-US,en;q=0.5",
           "cache-control": "no-cache",
           "content-type": "application/json",
-          origin: "https://www.anix.my",
+          origin: "https://cineflow.netlify.app/",
           pragma: "no-cache",
-          referer: "https://www.anix.my/",
+          referer: "https://cineflow.netlify.app/",
           "sec-ch-ua":
             '"Chromium";v="122", "Not(A:Brand";v="24", "Brave";v="122"',
           "sec-ch-ua-mobile": "?0",
@@ -47,8 +47,6 @@ const PlayerAnime = () => {
           "sec-fetch-dest": "empty",
           "sec-fetch-mode": "cors",
           "sec-fetch-site": "same-site",
-          'X-Requested-With': 'XMLHttpRequest',
-      'Origin': 'https://cineflow.netlify.app',
           "sec-gpc": "1",
           "user-agent":
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
@@ -81,9 +79,10 @@ const PlayerAnime = () => {
             "accept-language": "en-US,en;q=0.5",
             "cache-control": "no-cache",
             "content-type": "application/json",
-            origin: "https://www.anix.my",
+            origin: "https://cineflow.netlify.app/",
             pragma: "no-cache",
-            referer: "https://www.anix.my/",
+            // https://www.anix.my/
+            referer: "https://cineflow.netlify.app/",
             "sec-ch-ua":
               '"Chromium";v="122", "Not(A:Brand";v="24", "Brave";v="122"',
             "sec-ch-ua-mobile": "?0",
@@ -92,8 +91,6 @@ const PlayerAnime = () => {
             "sec-fetch-mode": "cors",
             "sec-fetch-site": "same-site",
             "sec-gpc": "1",
-            'X-Requested-With': 'XMLHttpRequest',
-      'Origin': 'https://cineflow.netlify.app',
             "user-agent":
               "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
           },

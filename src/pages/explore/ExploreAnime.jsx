@@ -15,8 +15,6 @@ const fetchAnimeData = async (pageNum) => {
     // url: `https://proxymaster-1-q6640207.deta.app/fetch/https://api.anix.my/movies/filter?limit=40&select=slug%2Cmovie%2Ctype%2Clatest_episode%2Cthumb%2Cname%2Csub_category%2Creleased_year%2Cgenres%2Cstate%2Cintro%2Ccreated_at%2Cother_names&sort_by=latest_episode.created_at&page=${pageNum}`,
     headers: {
       accept: "application/json",
-      'X-Requested-With': 'XMLHttpRequest',
-      'Origin': 'https://cineflow.netlify.app',
       "accept-language": "en-US,en;q=0.5",
       "cache-control": "no-cache",
       "content-type": "application/json",
@@ -42,8 +40,6 @@ const fetchSearchData = async (query) => {
       "accept-language": "en-US,en;q=0.5",
       "cache-control": "no-cache",
       "content-type": "application/json",
-      'X-Requested-With': 'XMLHttpRequest',
-      'Origin': 'https://cineflow.netlify.app',
     },
   };
 
