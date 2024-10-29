@@ -18,6 +18,7 @@ const fetchAnimeData = async (pageNum) => {
       "accept-language": "en-US,en;q=0.5",
       "cache-control": "no-cache",
       "content-type": "application/json",
+      "Access-Control-Allow-Origin": "https://cineflow.netlify.app",
     },
   };
 
