@@ -4,13 +4,53 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+  
+  <!-- Home page -->
+  <url>
+    <loc>https://cineflow.netlify.app/</loc>
+    <lastmod>2024-07-28T14:11:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
 
+  <!-- Example Explore movie page -->
+  <url>
+    <loc>https://cineflow.netlify.app/explore/movie</loc>
+    <lastmod>2024-07-28T14:11:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-  <loc>https://cineflow.netlify.app/</loc>
-  <lastmod>2024-07-28T14:11:00+00:00</lastmod>
-</url>
+    <!-- Example Explore tv page -->
+  <url>
+    <loc>https://cineflow.netlify.app/explore/tv</loc>
+    <lastmod>2024-07-28T14:11:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
+  <!-- Example Anime page -->
+  <url>
+    <loc>https://cineflow.netlify.app/explore/anime</loc>
+    <lastmod>2024-07-28T14:11:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Other relevant pages like watchlist, about, login, and dynamic pages per movie -->
+  <url>
+    <loc>https://cineflow.netlify.app/watchlist</loc>
+    <lastmod>2024-07-28T14:11:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Dynamic URLs for each movie or series (generate programmatically if possible) -->
+  <url>
+    <loc>https://cineflow.netlify.app/movie/889737</loc>
+    <lastmod>2024-07-28T14:11:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
 </urlset>
