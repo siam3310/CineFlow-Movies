@@ -39,7 +39,7 @@ const PlayerAnime = () => {
           "content-type": "application/json",
           origin: "https://www.anix.my",
           pragma: "no-cache",
-          referer: "https://www.anix.my/",
+          referer: "https://www.anix.my",
           "sec-ch-ua":
             '"Chromium";v="122", "Not(A:Brand";v="24", "Brave";v="122"',
           "sec-ch-ua-mobile": "?0",
@@ -81,7 +81,7 @@ const PlayerAnime = () => {
             "content-type": "application/json",
             origin: "https://www.anix.my",
             pragma: "no-cache",
-            referer: "https://www.anix.my/",
+            referer: "https://www.anix.my",
             "sec-ch-ua":
               '"Chromium";v="122", "Not(A:Brand";v="24", "Brave";v="122"',
             "sec-ch-ua-mobile": "?0",
