@@ -59,8 +59,8 @@ const fetchAnimeData = async (pageNum) => {
       "x-rapidapi-key": "43db6998cdmsh2ebabcbb7bfe84ep1865b9jsn0406325a9b5c",
       "x-rapidapi-host": "http-cors-proxy.p.rapidapi.com",
       "Content-Type": "application/json",
-      Origin: "www.example.com",  // Adjust origin as necessary
-      "X-Requested-With": "www.example.com"  // Adjust origin as necessary
+      Origin: "www.example.com",  
+      "X-Requested-With": "www.example.com" 
     },
     body: JSON.stringify({
       url: `https://api.anix.my/movies/filter?limit=40&select=slug%2Cmovie%2Ctype%2Clatest_episode%2Cthumb%2Cname%2Csub_category%2Creleased_year%2Cgenres%2Cstate%2Cintro%2Ccreated_at%2Cother_names&sort_by=latest_episode.created_at&page=${pageNum}`
@@ -83,8 +83,8 @@ const fetchSearchData = async (query) => {
       "x-rapidapi-key": "43db6998cdmsh2ebabcbb7bfe84ep1865b9jsn0406325a9b5c",
       "x-rapidapi-host": "http-cors-proxy.p.rapidapi.com",
       "Content-Type": "application/json",
-      Origin: "www.example.com",  // Adjust origin as necessary
-      "X-Requested-With": "www.example.com"  // Adjust origin as necessary
+      Origin: "www.example.com",
+      "X-Requested-With": "www.example.com"  
     },
     body: JSON.stringify({
       url: `https://api.anix.my/movies/filter?limit=80&keywords=${query}`
