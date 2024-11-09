@@ -29,7 +29,7 @@ const PlayerAnime = () => {
       let config = {
         method: "get",
         maxBodyLength: Infinity,
-        url: `https://thingproxy.freeboard.io/fetch/fetch/https://api.anix.my/movies/detail/${id}`,
+        url: `https://thingproxy.freeboard.io/fetch/https://api.anix.my/movies/detail/${id}`,
         // url: `https://proxymaster-1-q6640207.deta.app/fetch/https://api.anix.my/movies/detail/${id}`,
         headers: {
           authority: "api.anix.my",
@@ -98,7 +98,7 @@ const PlayerAnime = () => {
         setSources(response.data.data.links);
         const links = response.data.data.links;
         const fileLionsIndex = links.findIndex(
-          (link) => link.type === "FILELIONS"
+          (link) => link.type === "ASIANLOAD"
         );
         if (fileLionsIndex !== -1) {
           setSelectedSourceIndex(fileLionsIndex);
