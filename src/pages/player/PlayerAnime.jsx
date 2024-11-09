@@ -26,35 +26,23 @@ const PlayerAnime = () => {
 
   useEffect(() => {
     const fetchAnimeData = async () => {
-      let config = {
-        method: "get",
-        maxBodyLength: Infinity,
-        url: `https://thingproxy.freeboard.io/fetch/https://api.anix.my/movies/detail/${id}`,
-        // url: `https://proxymaster-1-q6640207.deta.app/fetch/https://api.anix.my/movies/detail/${id}`,
+      const url = 'https://http-cors-proxy.p.rapidapi.com/';
+      const options = {
+        method: 'POST',
         headers: {
-          authority: "api.anix.my",
-          accept: "application/json",
-          "accept-language": "en-US,en;q=0.5",
-          "cache-control": "no-cache",
-          "content-type": "application/json",
-          origin: "https://www.anix.my",
-          pragma: "no-cache",
-          referer: "https://www.anix.my",
-          "sec-ch-ua":
-            '"Chromium";v="122", "Not(A:Brand";v="24", "Brave";v="122"',
-          "sec-ch-ua-mobile": "?0",
-          "sec-ch-ua-platform": '"Windows"',
-          "sec-fetch-dest": "empty",
-          "sec-fetch-mode": "cors",
-          "sec-fetch-site": "same-site",
-          "sec-gpc": "1",
-          "user-agent":
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+          'x-rapidapi-key': '43db6998cdmsh2ebabcbb7bfe84ep1865b9jsn0406325a9b5c',
+          'x-rapidapi-host': 'http-cors-proxy.p.rapidapi.com',
+          'Content-Type': 'application/json',
+          Origin: 'www.example.com',
+          'X-Requested-With': 'www.example.com',
+        },
+        data: {
+          url: `https://api.anix.my/movies/detail/${id}`,
         },
       };
 
       try {
-        const response = await axios.request(config);
+        const response = await axios.request(url, options);
         setEpisodeCount(response.data.data.latest_episode.episode);
         setLoading(false);
       } catch (error) {
@@ -67,34 +55,23 @@ const PlayerAnime = () => {
   useEffect(() => {
     let slug = id + "-episode-" + selectedEpisode;
     const getLinks = async () => {
+      const url = 'https://http-cors-proxy.p.rapidapi.com/';
+      const options = {
+        method: 'POST',
+        headers: {
+          'x-rapidapi-key': '43db6998cdmsh2ebabcbb7bfe84ep1865b9jsn0406325a9b5c',
+          'x-rapidapi-host': 'http-cors-proxy.p.rapidapi.com',
+          'Content-Type': 'application/json',
+          Origin: 'www.example.com',
+          'X-Requested-With': 'www.example.com',
+        },
+        data: {
+          url: `https://api.anix.my/episodes/detail/${slug}`,
+        },
+      };
+
       try {
-        let config = {
-          method: "get",
-          maxBodyLength: Infinity,
-          url: `https://thingproxy.freeboard.io/fetch/https://api.anix.my/episodes/detail/${slug}`,
-          // url: `https://proxymaster-1-q6640207.deta.app/fetch/https://api.anix.my/episodes/detail/${slug}`,
-          headers: {
-            authority: "api.anix.my",
-            accept: "application/json",
-            "accept-language": "en-US,en;q=0.5",
-            "cache-control": "no-cache",
-            "content-type": "application/json",
-            origin: "https://www.anix.my",
-            pragma: "no-cache",
-            referer: "https://www.anix.my",
-            "sec-ch-ua":
-              '"Chromium";v="122", "Not(A:Brand";v="24", "Brave";v="122"',
-            "sec-ch-ua-mobile": "?0",
-            "sec-ch-ua-platform": '"Windows"',
-            "sec-fetch-dest": "empty",
-            "sec-fetch-mode": "cors",
-            "sec-fetch-site": "same-site",
-            "sec-gpc": "1",
-            "user-agent":
-              "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-          },
-        };
-        const response = await axios.request(config);
+        const response = await axios.request(url, options);
         setSources(response.data.data.links);
         const links = response.data.data.links;
         const fileLionsIndex = links.findIndex(
@@ -111,62 +88,60 @@ const PlayerAnime = () => {
         console.log(error);
       }
     };
-    getLinks(id);
+    getLinks();
   }, [selectedEpisode]);
 
   return (
     <div className="player">
-      <>
-        <div className="backdrop1-img">
-          <div style={{ position: "absolute" }}>
-            {loading && <Spinner initial={true} />}
+      <div className="backdrop1-img">
+        <div style={{ position: "absolute" }}>
+          {loading && <Spinner initial={true} />}
+        </div>
+        <Img src={backdrop_path} />
+      </div>
+      <iframe
+        id="dd"
+        src={selectedSource}
+        width="90%"
+        height="700px"
+        frameBorder="0"
+        scrolling="no"
+        allowFullScreen
+      ></iframe>
+      <div className="source-buttons">
+        {sources?.map((source, index) => (
+          <div
+            key={index}
+            onClick={() => handleButtonClick(index)}
+            className={
+              selectedSourceIndex === index
+                ? "source-btn-active button-62"
+                : "button-62"
+            }
+          >
+            {source.type}
           </div>
-          <Img src={backdrop_path} />
+        ))}
+      </div>
+      <div>
+        <div className="episode-container-anime">
+          {Array.from({ length: episodeCount }, (_, index) => index + 1).map(
+            (episodeNumber) => (
+              <div
+                className={
+                  selectedEpisode === episodeNumber
+                    ? "episode-div-active episode-div"
+                    : "episode-div"
+                }
+                key={episodeNumber}
+                onClick={() => handleEpisodeClick(episodeNumber)}
+              >
+                E{episodeNumber}
+              </div>
+            )
+          )}
         </div>
-        <iframe
-          id="dd"
-          src={selectedSource}
-          width="90%"
-          height="700px"
-          frameBorder="0"
-          scrolling="no"
-          allowFullScreen
-        ></iframe>
-        <div className="source-buttons">
-          {sources?.map((source, index) => (
-            <div
-              key={index}
-              onClick={() => handleButtonClick(index)}
-              className={
-                selectedSourceIndex === index
-                  ? "source-btn-active button-62"
-                  : "button-62"
-              }
-            >
-              {source.type}
-            </div>
-          ))}
-        </div>
-        <div>
-          <div className="episode-container-anime">
-            {Array.from({ length: episodeCount }, (_, index) => index + 1).map(
-              (episodeNumber) => (
-                <div
-                  className={
-                    selectedEpisode === episodeNumber
-                      ? "episode-div-active episode-div"
-                      : "episode-div"
-                  }
-                  key={episodeNumber}
-                  onClick={() => handleEpisodeClick(episodeNumber)}
-                >
-                  E{episodeNumber}
-                </div>
-              )
-            )}
-          </div>
-        </div>
-      </>
+      </div>
     </div>
   );
 };
